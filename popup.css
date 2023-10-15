@@ -1,0 +1,252 @@
+body {
+  width: 450px;
+  height: 500px;
+  font-size: 13px;
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  background-color: #dc4c3e;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+}
+
+main {
+  min-width: 300px;
+  padding: 0 10px 10px 10px;
+}
+
+text {
+  font-size: 9px;
+}
+.switch {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch span {
+  margin: 0px;
+  padding: 5px;
+  border: 1px solid lightgray;
+  background-color: azure;
+}
+
+.switch span:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.switch span:nth-child(3) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.switch span:hover {
+  background-color: #545557;
+}
+
+.WebSiteBlocker {
+  display: None;
+}
+
+.MusicPlayer {
+  display: None;
+}
+
+#TimerProgress {
+  display: None;
+}
+#TimerProgress > svg {
+  margin-left: 80px;
+}
+#TaskArea {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.TaskField {
+  border-top: 0.7px solid lightgray;
+  display: flex;
+  border-bottom: 0.7px solid lightgray;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.TaskField .TaskFocus {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+#blocked-url {
+  display: flex;
+  border-top: 0.5px solid lightgray;
+  border-bottom: 0.5px solid lightgray;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#blocked-url .url-name {
+  flex-grow: 1;
+}
+#blocked-url button {
+  flex-grow: 0;
+}
+
+.blockForm {
+  margin: 15px;
+}
+
+.playerImage {
+  width: 350px;
+  height: 180px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-image: url("yt_logo1.jpg");
+  background-size: 350px 180px;
+  margin-left: 43px;
+}
+
+#controlArea {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#videoId {
+  outline: None;
+  font-size: 11px;
+  margin-left: 43px;
+  height: 20px;
+  flex-grow: 1;
+}
+.TaskField .CompleteTask {
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+/* .TaskField .TaskFocus:hover {
+} */
+
+.TimerProgress {
+  display: None;
+}
+
+#addTask {
+  display: block;
+}
+
+.blockForm {
+  display: flex;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+  align-items: center;
+}
+
+.blockForm input {
+  border: None;
+  outline: None;
+  margin: 5px;
+  display: inline;
+  min-width: 300px;
+  flex-grow: 1;
+}
+.blockForm button {
+  align-self: flex-end;
+  margin: 5px;
+}
+
+#taskName {
+  border: None;
+  outline: None;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+#taskDueDate {
+  border: 1px solid lightgray;
+  padding: 3px;
+  outline: None;
+  border-radius: 4px;
+}
+
+button:hover {
+  color: #dc4c3e;
+}
+
+button:hover .icon_add {
+  background-color: #dc4c3e;
+  color: white;
+  border-radius: 50%;
+}
+
+#AddTaskButtonDiv {
+  display: block;
+}
+
+#AddTaskForm {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: None;
+}
+.FormField {
+  margin: 5px;
+}
+svg {
+  margin: 2px;
+}
+span {
+  margin: 3px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+button {
+  color: grey;
+  background-color: initial;
+  border: None;
+}
+
+.icon_add {
+  color: #dc4c3e;
+}
+
+.button-icon-form {
+  color: slategray;
+  background-color: #e8e8e8;
+  border-radius: 3px;
+}
+
+button:hover .button-icon-form {
+  background-color: #d4d4d4;
+}
+
+circle {
+  transition: all 1s linear;
+}
+#c1 {
+  transition: all 1s linear;
+  stroke: #dddedf;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+#c2 {
+  transition: all 1s linear;
+  stroke: #545557;
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: transparent;
+}

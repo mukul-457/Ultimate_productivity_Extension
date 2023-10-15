@@ -1,0 +1,2 @@
+
+curl "https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=AIzaSyB9kOpstKA8A0PFzekUd0QnVDmMBHH2Jec&id=wVYZFNCmrBI"

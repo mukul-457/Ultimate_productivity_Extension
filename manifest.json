@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Ultimate Productivity App",
+  "version": "1.0.0",
+  "description": "Manage tasks |  Set timer |  Block webstites | Play music",
+  "icons": {
+    "16": "logo1.png",
+    "48": "logo1.png",
+    "128": "logo1.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "logo1.png",
+      "24": "logo1.png",
+      "32": "logo1.png"
+    },
+
+    "default_title": "Default Title",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["./styles/contentStyle.css"],
+      "js": ["./scripts/contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["YTPlayer/player.html", "YTPlayer/player.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+
+  "options_page": "options.html",
+
+  "permissions": ["tabs", "activeTab", "storage", "alarms", "notifications"],
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}

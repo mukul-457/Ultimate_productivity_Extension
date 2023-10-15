@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="QuoteArea"></nav>
+    <div class="switch">
+      <span id="mainview">Tasks</span>
+      <span id="musicplayer">Music</span>
+      <span id="webblocker">Block</span>
+    </div>
+
+    <main>
+      <div id="Tasks">
+        <div id="TaskArea"></div>
+
+        <div class="AddButtonArea" id="AddTaskButtonDiv">
+          <button id="addTask">
+            <span class="icon_add">
+              <svg width="13" height="13">
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M6 6V.5a.5.5 0 0 1 1 0V6h5.5a.5.5 0 1 1 0 1H7v5.5a.5.5 0 1 1-1 0V7H.5a.5.5 0 0 1 0-1H6z"
+                ></path>
+              </svg>
+            </span>
+            Add Task
+          </button>
+          <div id="AddTaskForm" class="TaskFormArea">
+            <div class="FormField">
+              <input type="text" id="taskName" placeholder="Task Name" />
+            </div>
+            <div class="FormField">
+              <input type="date" id="taskDueDate" class="datepicker-input" />
+            </div>
+            <div class="FormField">
+              <button class="CancelButton" id="CancelTaskAddition">
+                <span class="button-icon-form">
+                  <svg width="13" , height="13">
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M5.7929 6.5 1.9038 2.6109a.5.5 315 01.7071-.7071L6.5 5.7929l3.8891-3.8891a.5.5 315 11.7071.7071L7.207 6.461 11.0891 10.3891a.5.5 315 11-.7071.7071l-3.828-3.9352L2.6109 11.0962a.5.5 315 01-.7071-.7071L5.7929 6.5z"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <button calss="OkButton" id="SubmitNewTask">
+                <span class="button-icon-form">
+                  <svg width="15" , height="15">
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M0 0 12 6C15 7.5 15 7.5 12 9L0 15 0 9 7.5 9C10.5 7.5 10.5 7.5 7.5 6L0 6M0 6 0 0"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="WebSiteBlocker" id="blocker">
+        <div id="blocked"></div>
+        <div class="blockForm">
+          <input
+            type="url"
+            id="WebsiteToBlock"
+            placeholder="Enter a url to block (ex https://www.facebook.com)"
+          />
+          <button id="Block-the-website">Add</button>
+        </div>
+        <div class="blockForm-Error">
+          <span> </span>
+        </div>
+      </div>
+
+      <div id="player" class="MusicPlayer">
+        <div class="playerImage"></div>
+        <div id="controlArea">
+          <input
+            type="text"
+            id="videoId"
+            placeholder="Enter the you tube video ID"
+          />
+          <button id="load-video">load</button>
+          <button id="playmusic">play</button>
+          <button id="pausemusic">pause</button>
+        </div>
+      </div>
+
+      <div id="TimerProgress">
+        <svg width="250px" height="250px" viewBox="0 0 42 42" class="donut">
+          <circle
+            id="c1"
+            cx="21"
+            cy="21"
+            r="15.91549430918954"
+            stroke-dasharray="100 0"
+            stroke-dashoffset="100"
+          ></circle>
+          <circle
+            id="c2"
+            cx="21"
+            cy="21"
+            r="15.91549430918954"
+            stroke-dasharray="0 100"
+            stroke-dashoffset="0"
+          ></circle>
+          <g class="chart-text">
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              id="counterText"
+            >
+              0
+            </text>
+          </g>
+        </svg>
+
+        <div class="TimerButtons">
+          <button class="StartWork">Focus on Task</button>
+          <button class="ShortBreak">Take Short Break</button>
+          <button class="LongBreak">Take a Long Break</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="popup.js"></script>
+  <script src="blocker.js"></script>
+  <script src="ytplayer.js"></script>
+  <script src="tasks.js"></script>
+</html>
